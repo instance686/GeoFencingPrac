@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
+
+            // Get the geofences used. Geofence data is hard coded in this sample.
+            populateGeofenceList();
+
             mGoogleApiClient=new GoogleApiClient.Builder(this)
                     .addApi(LocationServices.API).
                         addConnectionCallbacks(this).
